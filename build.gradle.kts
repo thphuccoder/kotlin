@@ -18,4 +18,10 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(21)
+
+    compilerOptions {
+        freeCompilerArgs.add("-Xwhen-guards")
+        freeCompilerArgs.add("-Xnon-local-break-continue")
+        freeCompilerArgs.add("-Xmulti-dollar-interpolation")
+    }
 }
